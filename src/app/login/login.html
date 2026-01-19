@@ -1,0 +1,26 @@
+<body>
+  <div class="login-container">
+    <div class="login-card">
+
+      <img 
+        class="logo"
+        src="https://www.salud.com.sv/wp-content/themes/salud/images/logo_salud.png"
+        alt="Logo Usuario"
+      />
+
+      <h2>🔐 Acceso Empleados</h2>
+
+      <input
+        type="number"
+        inputmode="numeric"
+        pattern="[0-9]*"
+        placeholder="Código de empleado"
+        [value]="employeeCode()"
+        (input)="employeeCode.set($any($event.target).value)"
+      />
+
+      <button (click)="login()">Ingresar</button>
+
+    </div>
+  </div>
+</body>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home Mejorado</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      background: #f0f2f5;
+    }
+
+    /* Navbar superior */
+    .navbar {
+      width: 100%;
+      height: 70px; /* un poquito más alta */
+      background-color: #457b9d;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 20px;
+      color: #fff;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    }
+
+    .navbar h1 {
+      font-size: 22px;
+    }
+
+    .navbar img {
+      width: 60px;  /* más grande */
+      height: auto; /* mantiene proporción */
+      border-radius: 0; /* sin redondeo */
+      object-fit: contain;
+    }
+
+    /* Contenedor principal */
+    .container {
+      display: flex;
+      flex: 1;
+      overflow: hidden;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      width: 220px;
+      background-color: #1d3557;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      padding: 20px;
+    }
+
+    .sidebar h2 {
+      margin-bottom: 40px;
+      font-size: 22px;
+      text-align: center;
+    }
+
+    .sidebar a {
+      text-decoration: none;
+      color: #fff;
+      padding: 12px 15px;
+      border-radius: 8px;
+      margin-bottom: 10px;
+      transition: background 0.3s;
+    }
+
+    .sidebar a:hover {
+      background-color: #457b9d;
+    }
+
+    /* Contenido principal */
+    .main {
+      flex: 1;
+      padding: 40px;
+      overflow-y: auto;
+    }
+
+    .main h1 {
+      font-size: 32px;
+      color: #1d3557;
+      margin-bottom: 15px;
+    }
+
+    .main p {
+      font-size: 18px;
+      color: #333;
+    }
+
+    /* Responsive */
+    @media(max-width: 768px) {
+      body {
+        flex-direction: column;
+      }
+
+      .container {
+        flex-direction: column;
+      }
+
+      .sidebar {
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 10px 0;
+      }
+
+      .sidebar h2 {
+        display: none;
+      }
+
+      .sidebar a {
+        margin-bottom: 0;
+      }
+
+      .main {
+        padding: 20px;
+      }
+
+      .navbar h1 {
+        font-size: 18px;
+      }
+
+      .navbar img {
+        width: 50px; /* se adapta mejor a móvil */
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar superior -->
+  <div class="navbar">
+    <h1>Home</h1>
+    <img src="https://www.salud.com.sv/wp-content/themes/salud/images/logo_salud.png" alt="Usuario">
+  </div>
+
+  <!-- Contenedor principal con sidebar y contenido -->
+  <div class="container">
+    <div class="sidebar">
+      <a href="#">Permiso</a>
+      <a href="#">Mis permisos</a>
+    </div>
+
+    <div class="main">
+      <h1>Bienvenido al Home</h1>
+      <p>Login exitoso. Aquí puedes gestionar tus permisos y revisar tus solicitudes.</p>
+    </div>
+  </div>
+
+</body>
+</html>

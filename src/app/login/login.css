@@ -1,0 +1,101 @@
+/* Reset básico */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #1d3557, #457b9d);
+}
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.login-card {
+  background: #fff;
+  width: 350px;
+  padding: 40px 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.login-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+}
+
+.login-card .logo {
+  width: 130px;
+  height: 130px;
+  margin-bottom: 20px;
+}
+
+
+.login-card h2 {
+  margin-bottom: 25px;
+  color: #1d3557;
+}
+
+.login-card input {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 20px;
+  border: 1.5px solid #ddd;
+  border-radius: 10px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+.login-card input:focus {
+  outline: none;
+  border-color: #1d3557;
+  box-shadow: 0 0 5px rgba(29,53,87,0.3);
+}
+
+.login-card button {
+  width: 100%;
+  padding: 12px;
+  background-color: #1d3557;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.login-card button:hover {
+  background-color: #457b9d;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 400px) {
+  .login-card {
+    width: 90%;
+    padding: 30px 20px;
+  }
+}
+/* Quitar flechas del input number */
+input[type="number"] {
+  appearance: textfield;     /* estándar */
+  -webkit-appearance: none; /* Chrome, Edge, Safari */
+  -moz-appearance: textfield; /* Firefox */
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
