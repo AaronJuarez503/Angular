@@ -1,0 +1,30 @@
+<!-- Navbar superior -->
+<div class="navbar">
+  <h1>Sistema de Permisos</h1>
+  <img
+    src="https://www.salud.com.sv/wp-content/themes/salud/images/logo_salud.png"
+    alt="Logo">
+</div>
+
+<!-- Contenedor principal -->
+<div class="container">
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <button routerLink="/home" class="btn-permiso">
+      🏠 Home
+    </button>
+
+    <button routerLink="/permiso" class="btn-permiso">
+      📄 Solicitar Permiso
+    </button>
+
+    <a href="#">Mis permisos</a>
+  </div>
+
+  <!-- Contenido dinámico -->
+  <div class="main">
+    <router-outlet></router-outlet>
+  </div>
+
+</div>
