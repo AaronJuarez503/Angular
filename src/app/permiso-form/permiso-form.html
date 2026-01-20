@@ -1,0 +1,25 @@
+<div class="card">
+  <h2>📄 Solicitud de Permiso</h2>
+
+  <form>
+    <label>Empleado</label>
+    <input type="text" [value]="empleado" readonly>
+
+    <label>Área / Departamento</label>
+    <input type="text" [value]="area" readonly>
+
+    <label>Fecha</label>
+    <input type="date" [value]="fecha" readonly>
+
+    <label>Motivo</label>
+    <textarea
+      placeholder="Escribe el motivo..."
+      [(ngModel)]="motivo"
+      name="motivo">
+    </textarea>
+
+    <button type="button" (click)="enviar()">
+      Solicitar Permiso
+    </button>
+  </form>
+</div>
